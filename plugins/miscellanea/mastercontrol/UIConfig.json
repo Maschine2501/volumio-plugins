@@ -1,0 +1,544 @@
+{
+  "page": {
+          "label": "TRANSLATE.PLUGIN_CONFIGURATION"
+          },
+  "sections": [
+                {                  
+                  "id": "Power_Control",
+                  "label": "TRANSLATE.REMOTE_POWER",
+                  "element": "section",
+                  "content": [
+                               {
+                                "id": "POWERSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdPower",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"power"}}
+                               }
+                             ]
+                },
+                {                  
+                  "id": "Source_Control",
+                  "label": "TRANSLATE.REMOTE_SOURCE",
+                  "element": "section",
+                  "content": [                 
+                               {
+                                "id": "TVSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTV",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"sourcetv"}}
+                               },         
+                               {
+                                "id": "TAPE1SEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTape1",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendTape1", "data":"sourcetape"}}
+                               },         
+                               {
+                                "id": "TAPE2SEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTape2",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendTape2", "data":"sourcetape"}}
+                               },                                        
+                               {
+                                "id": "CDSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCD",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"sourcecd"}}
+                               },
+                               {
+                                "id": "PHONOSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdPhono",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"sourcephono"}}
+                               },
+                               {
+                                "id": "FMSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdFM",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"sourcefm"}}
+                               },
+                               {
+                                "id": "AMSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdAM",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"sourceam"}}
+                               },
+                               {
+                                "id": "TAPE1COPY",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTape1copy",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"copysourcetotape1"}}
+                               },         
+                               {
+                                "id": "TAPE2COPY",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTape2copy",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"copysourcetotape2"}}
+                               }                                                                             
+                             ]
+                },
+                {                  
+                  "id": "Volume_Control",
+                  "label": "TRANSLATE.REMOTE_SOUND",
+                  "element": "section",
+                  "content": [      
+                               {
+                                "id": "VOLPLUSSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdVolume1Plus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"volumeplus"}}
+                               },               
+                               {
+                                "id": "VOLMINUSSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdVolume1Minus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"volumeminus"}}
+                               },
+                               {
+                                "id": "MUTE",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdMute",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"mute"}}
+                               }
+                              ]
+                },
+                {                  
+                  "id": "Speaker_Control",
+                  "label": "TRANSLATE.REMOTE_SPEAKER",
+                  "element": "section",
+                  "content": [
+                              {
+                                "id": "SPEAKER1",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdSPKR1",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SPEAKER1", "data":"SPEAKER"}}
+                              },                          
+                              {
+                                "id": "SPEAKER2",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdSPKR2",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SPEAKER2", "data":"SPEAKER"}}
+                              },       
+                              {
+                                "id": "PREOUT1",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdPreOut1",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"PreOut1"}}
+                              },       
+                              {
+                                "id": "PREOUT2",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdPreOut2",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"PreOut2"}}
+                               }          
+                            ]
+                },                
+                {                  
+                  "id": "Sound_Control",
+                  "label": "TRANSLATE.REMOTE_SOUND",
+                  "element": "section",
+                  "content": [   
+                               {
+                                 "id": "EQ",
+                                 "element": "button",
+                                 "label": "TRANSLATE.SerialCmdEQ",
+                                 "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"EQ"}}
+                                },
+                               {
+                                "id": "BALANCECENTER",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdBalanceCenter",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"balancecenter"}}
+                               },
+                               {
+                                "id": "BALANCEPLUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdBalancePlus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"balanceplus"}}
+                               },
+                               {
+                                "id": "BALANCEMINUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdBalanceMinus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"balanceminus"}}
+                               },
+                               {
+                                "id": "BASSCENTER",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdBassCenter",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"basscenter"}}
+                               },
+                               {
+                                "id": "BASSPLUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdBassPlus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"bassplus"}}
+                               },
+                               {
+                                "id": "BASSMINUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdBassMinus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"bassminus"}}
+                               },
+                               {
+                                "id": "LOWBASS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdL_Bass",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"LowBassPlus", "data":"lowbass"}}
+                               },
+                               {
+                                "id": "LOWBASSPLUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdL_BassPlus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"LowBassPlus", "data":"lowbass"}}
+                               },
+                               {
+                                "id": "LOWBASSMINUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdL_BassMinus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"LowBassMinus", "data":"lowbass"}}
+                               },
+                               {
+                                "id": "TREBLECENTER",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTreble",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"treblecenter"}}
+                               },
+                               {
+                                "id": "TREBLEPLUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTreblePlus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"trebleplus"}}
+                               },
+                               {
+                                "id": "TREBLEMINUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTrebleMinus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"trebleminus"}}
+                               },
+                               {
+                                "id": "Loudness",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdLoudness",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"loudness"}}
+                               },
+                               {
+                                "id": "20HZ",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTwentyHz",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"20hz"}}
+                               },
+                               {
+                                "id": "HBLEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdH_Blend",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"hblend"}}
+                               }          
+                            ]
+                },
+                {                  
+                  "id": "Playback_Control",
+                  "label": "TRANSLATE.REMOTE_PLAYBACK",
+                  "element": "section",
+                  "content": [
+                              {
+                                "id": "PLAY",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdStart",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"start"}}
+                              },                          
+                              {
+                                "id": "PAUSE",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdPause",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"pause"}}
+                              },       
+                              {
+                                "id": "STOP",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdStop",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"stop"}}
+                              },       
+                              {
+                                "id": "RECORD",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdRecord",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"record"}}
+                               },          
+                               {
+                                "id": "NEXTSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdProgrammPlus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"programplus"}}
+                               },               
+                               {
+                                "id": "PREVIOUSSEND",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdProgrammMinus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"programminus"}}
+                               },
+                               {
+                                "id": "ATOTUNEPLUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTwoArrowRight",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"autoplus"}}
+                               },               
+                               {
+                                "id": "AUTOTUNEMINUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTwoArrowLeft",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"autominus"}}
+                               },  
+                               {
+                                "id": "MANUALTUNEPLUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdManTunePlus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"manualplus"}}
+                               },               
+                               {
+                                "id": "MANUALTUNEMINUS",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdManTuneMinus",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"manualminus"}}
+                               }    
+                            ]
+                },
+                {                  
+                  "id": "NUMPAD_Control",
+                  "label": "TRANSLATE.REMOTE_NUMPAD",
+                  "element": "section",
+                  "content": [
+                              {
+                                "id": "ZERO",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdZero",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMZero"}}
+                              },                          
+                              {
+                                "id": "ONE",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdOne",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMOne"}}
+                              },       
+                              {
+                                "id": "TWO",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdTwo",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMTwo"}}
+                              },       
+                              {
+                                "id": "THREE",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdThree",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMThree"}}
+                               },          
+                               {
+                                "id": "FOUR",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdFour",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMFour"}}
+                               },               
+                               {
+                                "id": "FIVE",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdFive",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMFive"}}
+                               },
+                               {
+                                "id": "SIX",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdSix",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMSix"}}
+                               },               
+                               {
+                                "id": "SEVEN",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdSeven",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMSeven"}}
+                               },  
+                               {
+                                "id": "EIGHT",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdEight",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMEight"}}
+                               },               
+                               {
+                                "id": "NINE",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdNine",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"NUMNine"}}
+                               }    
+                            ]
+                },
+                {                  
+                  "id": "CD_Control",
+                  "label": "TRANSLATE.REMOTE_CD_REMOTE",
+                  "element": "section",
+                  "content": [
+                              {
+                                "id": "CDPLAY",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDstart",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDPlay"}}
+                              },                          
+                              {
+                                "id": "CDPAUSE",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDpause",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDPause"}}
+                              },       
+                              {
+                                "id": "CDSKIPP",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDskip_prev",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDSkipP"}}
+                              },       
+                              {
+                                "id": "CDSKIPN",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDskip_next",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDSkipN"}}
+                               },          
+                               {
+                                "id": "CDFASTP",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDfast_prev",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDFFp"}}
+                               },               
+                               {
+                                "id": "CDFASTF",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDfast_next",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDFFn"}}
+                               },
+                               {
+                                "id": "CDREPEAT",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDrepeat",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDRepeat"}}
+                               },               
+                               {
+                                "id": "CDA_B",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDA_B",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDAB"}}
+                               },  
+                               {
+                                "id": "CDCLEAR",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDclear",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDClear"}}
+                               },               
+                               {
+                                "id": "CDTIME",
+                                "element": "button",
+                                "label": "TRANSLATE.SerialCmdCDtime",
+                                "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDTime"}}
+                               },
+                               {
+                                  "id": "CDINDEX",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDgo_to",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDIndex"}}
+                                },                          
+                                {
+                                  "id": "CDRETURN",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDreturn",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDReturn"}}
+                                },       
+                                {
+                                  "id": "CDSET",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDset",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDSet"}}
+                                },       
+                                {
+                                  "id": "CDZERO",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDzero",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDzero"}}
+                                 },          
+                                 {
+                                  "id": "CDONE",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDone",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDone"}}
+                                 },               
+                                 {
+                                  "id": "CDTWO",
+                                  "element": "button",
+                                  "label": "SerialCmdCDtwo",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDtwo"}}
+                                 },
+                                 {
+                                  "id": "CDTHREE",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDthree",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDthree"}}
+                                 },               
+                                 {
+                                  "id": "CDFOUR",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDfour",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDfour"}}
+                                 },  
+                                 {
+                                  "id": "CDFIVE",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDfive",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDfive"}}
+                                 },               
+                                 {
+                                  "id": "CDSIX",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDsix",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDsix"}}
+                                 },
+                                 {
+                                  "id": "CDSEVEN",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDseven",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDseven"}}
+                                 },  
+                                 {
+                                  "id": "CDEIGHT",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDeight",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDeight"}}
+                                 },               
+                                 {
+                                  "id": "CDNINE",
+                                  "element": "button",
+                                  "label": "TRANSLATE.SerialCmdCDnine",
+                                  "onClick": {"type":"emit", "message":"callMethod", "data":{"endpoint":"miscellanea/mastercontrol", "method":"SendCommand", "data":"CDnine"}}
+                                 }                               
+                            ]
+                },                                  
+                {
+                  "id": "serialport-setting",
+                  "element": "section",
+                  "label": "TRANSLATE.PLUGIN_SETTINGS",
+                  "onSave": {"type":"controller", "endpoint":"miscellanea/mastercontrol", "method":"saveSettings"},
+                  "saveButton": {
+                                "label": "TRANSLATE.SAVE",
+                                "data": [
+                                "SERIAL_PORT"
+                                ]
+                                },
+                  "content": [
+                               {
+                                "id": "SERIAL_PORT",
+                                "element": "input",
+                                "type": "text",
+                                "label": "TRANSLATE.SETTINGS_PLACEHOLDER",
+                                "attributes": [
+                                  {"placeholder": "ttyUSB0"}, {"maxlength": 10}
+                                ],
+                                "value": ""
+                               }
+                             ]
+                  }
+              ]
+}
+
